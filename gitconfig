@@ -1,0 +1,60 @@
+
+[user]
+	name = Ryan.Chang
+	email = ryan.chang@vivotek.com
+
+[core]
+	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	autocrlf = false
+
+[alias]
+	st = status
+	ss = status -s -uno .
+	ci = commit --verbose
+	br = branch
+	co = checkout
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	sh = !git-sh
+	clog = log --graph --date=short --pretty=format:\"%C(124)%ad %C(24)%h %C(34)%an %C(252)%s%C(178)%d\" #--encoding="ISO-8859-1"
+	d = difftool
+	exec = "!exec "
+	dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy  | less --tabs=4 -RFX --pattern '^(Date|added|deleted|modified): '; }; f"
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	grep = auto
+	sh = auto
+
+[color "sh"]
+	branch = yellow ul 
+	workdir = blue bold
+	dirty = red
+
+[merge]
+	tool = vimdiff
+
+[diff]
+	tool = vimdiff
+
+[difftool]
+	prompt = false
+
+[svn]
+	rmdir = true
+[help]
+	autocorrect = 3
+[pull]
+	rebase = true
+[rebase]
+	autosquash = true
+[color "diff-highlight"]
+	oldNormal = red
+	oldHighlight = red 52
+	newNormal = green
+	newHighlight = green 22
+[push]
+	default = simple
+[fetch]
+	prune = true
