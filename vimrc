@@ -19,6 +19,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'dietsche/vim-lastplace'
 Plug 'pi314/boshiamy.vim', {'on': 'Liu'}
 "Plug 'yuttie/comfortable-motion.vim'
+Plug 'Tuxdude/mark.vim'
 
 Plug 'flazz/vim-colorschemes'
 
@@ -55,9 +56,6 @@ let mapleader = ","
 " insert a blank line without entering insert mode
 nnoremap <Leader>O O<ESC>j
 nnoremap <Leader>o o<ESC>k
-
-" ref: http://vim.wikia.com/wiki/Highlight_all_search_pattern_matches
-nnoremap <Leader># :let curwd='\<<C-R>=expand("<cword>")<CR>\>'<CR>:let @/=curwd<CR>:call histadd("search", curwd)<CR>:silent set hlsearch<CR>
 
 " Open the directory of current file in a vertical split / a new tab
 nnoremap <Leader>- :Vexplore!<CR>
