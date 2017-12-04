@@ -87,7 +87,7 @@ cnoremap          <C-R>/ <C-R>=Del_word_delims()<CR>
     " syntastic
     """"""""""""""""""""""""""""""
     let g:syntastic_javascript_checkers=['eslint']
-    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_open = 0
     let g:syntastic_check_on_wq = 0
     let g:syntastic_auto_loc_list = 1
 
