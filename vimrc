@@ -20,6 +20,7 @@ Plug 'dietsche/vim-lastplace'
 Plug 'pi314/boshiamy.vim', {'on': 'Liu'} " ,, to turn on
 "Plug 'yuttie/comfortable-motion.vim'
 Plug 'Tuxdude/mark.vim'
+Plug 'AndrewRadev/switch.vim'
 
 Plug 'flazz/vim-colorschemes'
 
@@ -101,4 +102,20 @@ cnoremap          <C-R>/ <C-R>=Del_word_delims()<CR>
       \ 'dir': 'node_modules',
       \ }
 
+    """"""""""""""""""""""""""""""
+    " switch
+    """"""""""""""""""""""""""""""
+    " Ref: https://blog.othree.net/log/2017/11/16/naming-cases/
+    " Switch cycling through: MACRO_CASE、lisp-case、camelCase、PascalCase、snake_case
+    " default key stroke: gs
+    let g:switch_custom_definitions =
+      \ [
+      \   {
+      \     '\<\(\l\)\(\l\+\(\u\l\+\)\+\)\>': '\=toupper(submatch(1)) . submatch(2)',
+      \     '\<\(\u\l\+\)\(\u\l\+\)\+\>': "\\=tolower(substitute(submatch(0), '\\(\\l\\)\\(\\u\\)', '\\1_\\2', 'g'))",
+      \     '\<\(\l\+\)\(_\l\+\)\+\>': '\U\0',
+      \     '\<\(\u\+\)\(_\u\+\)\+\>': "\\=tolower(substitute(submatch(0), '_', '-', 'g'))",
+      \     '\<\(\l\+\)\(-\l\+\)\+\>': "\\=substitute(submatch(0), '-\\(\\l\\)', '\\u\\1', 'g')",
+      \   }
+      \ ]
 " }}}
