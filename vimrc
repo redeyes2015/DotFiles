@@ -17,7 +17,7 @@ Plug 'bling/vim-airline'
 "Plug 'honza/vim-snippets'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'dietsche/vim-lastplace'
-Plug 'pi314/boshiamy.vim', {'on': 'Liu'}
+Plug 'pi314/boshiamy.vim', {'on': 'Liu'} " ,, to turn on
 "Plug 'yuttie/comfortable-motion.vim'
 Plug 'Tuxdude/mark.vim'
 
