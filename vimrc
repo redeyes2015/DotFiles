@@ -7,6 +7,7 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-vinegar'
 Plug 'scrooloose/syntastic'
+Plug 'sekel/vim-vue-syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'groenewege/vim-less', {'for': 'less'}
 Plug 'pangloss/vim-javascript'
@@ -20,6 +21,7 @@ Plug 'dietsche/vim-lastplace'
 Plug 'pi314/boshiamy.vim', {'on': 'Liu'} " ,, to turn on
 "Plug 'yuttie/comfortable-motion.vim'
 Plug 'Tuxdude/mark.vim'
+Plug 'posva/vim-vue', {'for': 'vue'}
 Plug 'AndrewRadev/switch.vim'
 
 Plug 'flazz/vim-colorschemes'
@@ -88,6 +90,12 @@ cnoremap          <C-R>/ <C-R>=Del_word_delims()<CR>
     " syntastic
     """"""""""""""""""""""""""""""
     let g:syntastic_javascript_checkers=['eslint']
+    let g:syntastic_javascript_eslint_exec = 'yarn'
+    let g:syntastic_javascript_eslint_exe = 'yarn -s eslint'
+    let g:syntastic_vue_checkers=['eslint']
+    let g:syntastic_vue_eslint_exec = 'yarn'
+    let g:syntastic_vue_eslint_exe = 'yarn -s eslint'
+
     let g:syntastic_check_on_open = 0
     let g:syntastic_check_on_wq = 0
     let g:syntastic_auto_loc_list = 1
