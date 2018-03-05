@@ -19,14 +19,11 @@ Plug 'bling/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'dietsche/vim-lastplace'
 Plug 'pi314/boshiamy.vim', {'on': 'Liu'} " ,, to turn on
-"Plug 'yuttie/comfortable-motion.vim'
 Plug 'Tuxdude/mark.vim'
 Plug 'posva/vim-vue', {'for': 'vue'}
 Plug 'AndrewRadev/switch.vim'
 
 Plug 'flazz/vim-colorschemes'
-
-"Plugin 'evanmiller/nginx-vim-syntax'
 
 call plug#end()
 
@@ -40,9 +37,6 @@ set smartcase
 set splitright
 set switchbuf=usetab
 set gdefault
-
-" hi Visual cterm=NONE ctermbg=White ctermfg=Black
-" hi Search cterm=NONE ctermbg=White ctermfg=Black
 
 set t_Co=256
 set background=dark
