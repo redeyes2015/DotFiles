@@ -1,6 +1,3 @@
-
-set nocompatible
-
 " :PlugInstall to install plugins.
 call plug#begin()
 
