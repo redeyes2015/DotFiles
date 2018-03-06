@@ -101,7 +101,7 @@ cabbrev %/ %:p:h/
     " ctrlp
     """"""""""""""""""""""""""""""
     let g:ctrlp_working_path_mode = 'rc'
-    let g:ctrlp_root_markers = ['Makefile']
+    let g:ctrlp_root_markers = ['Makefile', 'package.json']
     let g:ctrlp_custom_ignore = {
       \ 'dir': 'node_modules',
       \ }
