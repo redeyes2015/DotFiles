@@ -74,8 +74,10 @@ endfunction
 
 inoremap          <C-R>/ <C-R>=Del_word_delims()<CR>
 cnoremap          <C-R>/ <C-R>=Del_word_delims()<CR>
-
 " }}}
+
+" I need %:p:h so much ...
+cabbrev %/ %:p:h/
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [ Plugin configuration ]                                                   {{{
