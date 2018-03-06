@@ -42,6 +42,10 @@ set t_Co=256
 set background=dark
 colorscheme peaksea
 
+" Highlight ugly code
+match ErrorMsg '\%>120v.\+'
+match ErrorMsg '\s\+$'
+
 " To avoid issues with gulp.watch
 " see: https://github.com/nodejs/node-v0.x-archive/issues/3172
 autocmd BufWritePre */project*   setlocal backupcopy=yes
