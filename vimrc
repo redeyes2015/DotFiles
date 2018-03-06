@@ -31,6 +31,9 @@ set hlsearch
 set ignorecase
 set smartcase
 
+set undofile
+set undodir=~/.vim/undofiles
+
 set splitright
 set switchbuf=usetab
 set gdefault
