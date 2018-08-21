@@ -42,9 +42,9 @@ set splitright
 set switchbuf=usetab
 set gdefault
 
-set t_Co=256
-set background=dark
-colorscheme peaksea
+colorscheme molokai
+" ctermbg=235 from molokai is just too subtle
+hi Visual                      ctermbg=238
 
 " Highlight ugly code
 match ErrorMsg '\%>120v.\+'
