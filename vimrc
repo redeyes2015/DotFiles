@@ -39,6 +39,7 @@ set undofile
 set undodir=~/.vim/undofiles
 
 set splitright
+set splitbelow
 set switchbuf=usetab
 set gdefault
 
