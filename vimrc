@@ -2,6 +2,9 @@
 call plug#begin()
 
 Plug 'tpope/vim-sensible'
+" Press . on a file to pre-populate it at the end of a : command line.
+" also !, which starts the line off with a bang.
+" Press y. to yank an absolute path for the file under the cursor.
 Plug 'tpope/vim-vinegar'
 Plug 'scrooloose/syntastic'
 Plug 'sekel/vim-vue-syntastic'
@@ -80,7 +83,7 @@ inoremap          <C-R>/ <C-R>=Del_word_delims()<CR>
 cnoremap          <C-R>/ <C-R>=Del_word_delims()<CR>
 " }}}
 
-" I need %:p:h so much ...
+" I need %:p:h so much ... hit CTRL-] to expand immediately
 cabbrev %/ %:p:h/
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
