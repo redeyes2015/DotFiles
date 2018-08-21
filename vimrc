@@ -43,6 +43,8 @@ set splitbelow
 set switchbuf=usetab
 set gdefault
 
+set omnifunc=syntaxcomplete#Complete
+
 colorscheme molokai
 " ctermbg=235 from molokai is just too subtle
 hi Visual                      ctermbg=238
