@@ -58,6 +58,7 @@ match ErrorMsg '\s\+$'
 autocmd BufWritePre */project*   setlocal backupcopy=yes
 
 autocmd FileType gitcommit setlocal spell
+autocmd FileType netrw nnoremap <buffer> / :keeppattern /
 autocmd FileType javascript,vue setlocal signcolumn=yes
 autocmd FileType vue syntax sync fromstart
 
@@ -66,6 +67,8 @@ let mapleader = ","
 " Open the directory of current file in a vertical split / a new tab
 nnoremap <Leader>- :Vexplore!<CR>
 nnoremap <Leader>t- :Texplore<CR>
+
+nnoremap `/ //e<CR>
 
 function! Del_word_delims()
    let reg = getreg('/')
