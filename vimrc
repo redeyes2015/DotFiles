@@ -6,8 +6,7 @@ Plug 'tpope/vim-sensible'
 " also !, which starts the line off with a bang.
 " Press y. to yank an absolute path for the file under the cursor.
 Plug 'tpope/vim-vinegar'
-Plug 'scrooloose/syntastic'
-Plug 'sekel/vim-vue-syntastic'
+Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'groenewege/vim-less', {'for': 'less'}
 Plug 'pangloss/vim-javascript'
@@ -54,6 +53,8 @@ match ErrorMsg '\s\+$'
 autocmd BufWritePre */project*   setlocal backupcopy=yes
 
 autocmd FileType gitcommit setlocal spell
+autocmd FileType javascript,vue setlocal signcolumn=yes
+autocmd FileType vue syntax sync fromstart
 
 let mapleader = ","
 
@@ -81,28 +82,24 @@ endfunction
 
 inoremap          <C-R>/ <C-R>=Del_word_delims()<CR>
 cnoremap          <C-R>/ <C-R>=Del_word_delims()<CR>
-" }}}
 
 " I need %:p:h so much ... hit CTRL-] to expand immediately
 cabbrev %/ %:p:h/
+
+" I mis-type q: quite often...
+nnoremap q: <nop>
+nnoremap <leader>q: q:
+
+" }}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [ Plugin configuration ]                                                   {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     """"""""""""""""""""""""""""""
-    " syntastic
+    " ale
     """"""""""""""""""""""""""""""
-    let g:syntastic_javascript_checkers=['eslint']
-    let g:syntastic_javascript_eslint_exec = 'yarn'
-    let g:syntastic_javascript_eslint_exe = 'yarn -s eslint'
-    let g:syntastic_vue_checkers=['eslint']
-    let g:syntastic_vue_eslint_exec = 'yarn'
-    let g:syntastic_vue_eslint_exe = 'yarn -s eslint'
-
-    let g:syntastic_check_on_open = 0
-    let g:syntastic_check_on_wq = 0
-    let g:syntastic_auto_loc_list = 1
-
+    let g:ale_sign_error = '✗✗'
+    let g:ale_javascript_eslint_suppress_eslintignore = 1
 
     """"""""""""""""""""""""""""""
     " ctrlp
