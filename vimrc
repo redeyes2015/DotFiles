@@ -21,6 +21,7 @@ Plug 'pi314/boshiamy.vim', {'on': 'Liu'} " ,, to turn on
 Plug 'Tuxdude/mark.vim'
 Plug 'posva/vim-vue', {'for': 'vue'}
 Plug 'AndrewRadev/switch.vim'
+Plug 'tpope/vim-surround'
 
 Plug 'flazz/vim-colorschemes'
 
