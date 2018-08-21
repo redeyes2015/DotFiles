@@ -63,10 +63,6 @@ autocmd FileType vue syntax sync fromstart
 
 let mapleader = ","
 
-" insert a blank line without entering insert mode
-nnoremap <Leader>O O<ESC>j
-nnoremap <Leader>o o<ESC>k
-
 " Open the directory of current file in a vertical split / a new tab
 nnoremap <Leader>- :Vexplore!<CR>
 nnoremap <Leader>t- :Texplore<CR>
