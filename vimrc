@@ -10,7 +10,7 @@ Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'groenewege/vim-less', {'for': 'less'}
 Plug 'pangloss/vim-javascript'
-Plug 'vcscommand.vim'
+Plug 'vim-scripts/vcscommand.vim'
 Plug 'briancollins/vim-jst', {'for': 'jst'}
 Plug 'bling/vim-airline'
 "Plug 'sirver/ultisnips'
