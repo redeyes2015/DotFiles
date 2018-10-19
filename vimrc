@@ -86,8 +86,14 @@ function! Del_word_delims()
    return res
 endfunction
 
-inoremap          <C-R>/ <C-R>=Del_word_delims()<CR>
-cnoremap          <C-R>/ <C-R>=Del_word_delims()<CR>
+" Terminal seems to translate <CTRL-Space> to <NUL> and trigger <CTRL-@> in
+" vim, which \"Insert previously inserted text and stop insert.\"
+" But that gets in the way of my old habit of togggling IME mode in windows
+" so let's use it as the toggle
+let g:ime_toggle_english='<C-@>'
+
+inoremap <C-R>/ <C-R>=Del_word_delims()<CR>
+cnoremap <C-R>/ <C-R>=Del_word_delims()<CR>
 
 " I need %:p:h so much ... hit CTRL-] to expand immediately
 cabbrev %/ %:p:h/
