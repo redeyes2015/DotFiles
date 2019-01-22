@@ -7,3 +7,6 @@ ln -s $HOME/DotFiles/gitconfig ~/.gitconfig
 vim +PlugInstall
 
 fish < ./abbr.fish
+
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
