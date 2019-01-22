@@ -13,8 +13,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'vim-scripts/vcscommand.vim'
 Plug 'briancollins/vim-jst', {'for': 'jst'}
 Plug 'bling/vim-airline'
-"Plug 'sirver/ultisnips'
-"Plug 'honza/vim-snippets'
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'dietsche/vim-lastplace'
 Plug 'pi314/boshiamy.vim', {'on': 'Liu'} " ,, to turn on
@@ -121,6 +121,14 @@ nnoremap <leader>q: q:
     let g:ctrlp_custom_ignore = {
       \ 'dir': 'node_modules',
       \ }
+
+
+    """"""""""""""""""""""""""""""
+    " ultisnip
+    """"""""""""""""""""""""""""""
+    "let g:UltiSnipsExpandTrigger="<tab>"
+    "let g:UltiSnipsJumpForwardTrigger="<c-b>"
+    "let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
     """"""""""""""""""""""""""""""
     " switch
