@@ -1,4 +1,6 @@
-if test -f /home/rein/.autojump/share/autojump/autojump.fish; . /home/rein/.autojump/share/autojump/autojump.fish; end
+if test -f /usr/share/autojump/autojump.fish;
+  source  /usr/share/autojump/autojump.fish;
+end
 
 if test "$TERM" = "xterm"
   if test -n "$COLORTERM"
