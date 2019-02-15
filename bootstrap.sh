@@ -19,6 +19,7 @@ curl -sSLo ~/.config/fish/functions/fisher.fish --create-dirs \
 ln -s $InstallDir/fishfile ~/.config/fish/fishfile
 fish -c fisher
 ln -s $InstallDir/fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
+ln -s $InstallDir/grt.fish ~/.config/fish/functions/grt.fish
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 yes | ~/.fzf/install --no-zsh --no-bash
