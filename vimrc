@@ -116,6 +116,7 @@ nnoremap <leader>q: q:
     """"""""""""""""""""""""""""""
     let g:ale_sign_error = '✗✗'
     let g:ale_javascript_eslint_suppress_eslintignore = 1
+    let g:ale_maximum_file_size = 10240
 
     """"""""""""""""""""""""""""""
     " ctrlp
