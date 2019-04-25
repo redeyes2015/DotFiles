@@ -51,6 +51,10 @@ colorscheme molokai
 " ctermbg=235 from molokai is just too subtle
 hi Visual                      ctermbg=238
 
+" original setting from molokai always confues me about
+" 'why my cursor suddonly jumpped, and where is it after all!?'
+hi MatchParen cterm=bold,italic ctermfg=208 ctermbg=233
+
 " Highlight ugly code
 match ErrorMsg '\%>120v.\+'
 match ErrorMsg '\s\+$'
