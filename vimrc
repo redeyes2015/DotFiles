@@ -17,7 +17,7 @@ Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'dietsche/vim-lastplace'
-Plug 'pi314/boshiamy.vim', {'on': 'Liu'} " ,, to turn on
+Plug 'pi314/ime.vim', {'on': 'Liu', 'commit': '14e4c57ec4af6153ce0c3702989eb698913d84f9'} " ,, to turn on
 Plug 'Tuxdude/mark.vim'
 Plug 'posva/vim-vue', {'for': 'vue'}
 Plug 'AndrewRadev/switch.vim'
