@@ -67,6 +67,7 @@ autocmd FileType gitcommit setlocal spell
 autocmd FileType netrw nnoremap <buffer> / :keeppattern /
 autocmd FileType javascript,vue setlocal signcolumn=yes
 autocmd FileType vue syntax sync fromstart
+autocmd FileType vuejs set filetype=vue
 
 let mapleader = ","
 
