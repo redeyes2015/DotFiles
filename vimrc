@@ -129,6 +129,11 @@ nnoremap <leader>q: q:
 
 
     """"""""""""""""""""""""""""""
+    " vim-vue
+    """"""""""""""""""""""""""""""
+    let g:vue_pre_processors = ['less']
+
+    """"""""""""""""""""""""""""""
     " ultisnip
     """"""""""""""""""""""""""""""
     "let g:UltiSnipsExpandTrigger="<tab>"
