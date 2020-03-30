@@ -1,7 +1,6 @@
 
 [user]
-	name = Ryan.Chang
-	email = ryan.chang@vivotek.com
+	useConfigOnly = true
 
 [core]
 	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
