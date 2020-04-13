@@ -39,6 +39,7 @@ set smartcase
 
 set undofile
 set undodir=~/.vim/undofiles
+set directory^=~/.vim/swap//
 
 set splitright
 set splitbelow

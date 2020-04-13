@@ -2,6 +2,7 @@
 
 InstallDir=$HOME/DotFiles
 
+mkdir -p ~/.vim/undofiles ~/.vim/swap
 curl -sSLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ln -s "$InstallDir/vimrc" ~/.vimrc
