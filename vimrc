@@ -7,7 +7,7 @@ Plug 'tpope/vim-sensible'
 " Press y. to yank an absolute path for the file under the cursor.
 Plug 'tpope/vim-vinegar'
 Plug 'w0rp/ale'
-Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'ctrlpvim/ctrlp.vim'
 Plug 'groenewege/vim-less', {'for': 'less'}
 Plug 'pangloss/vim-javascript'
 Plug 'vim-scripts/vcscommand.vim'
@@ -22,6 +22,8 @@ Plug 'Tuxdude/mark.vim'
 Plug 'posva/vim-vue', {'for': 'vue'}
 Plug 'AndrewRadev/switch.vim'
 Plug 'tpope/vim-surround'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
+Plug 'junegunn/fzf.vim'
 
 Plug 'flazz/vim-colorschemes'
 
@@ -129,6 +131,14 @@ nnoremap <leader>q: q:
       \ 'dir': 'node_modules',
       \ }
 
+    """"""""""""""""""""""""""""""
+    " FZF customization
+    """"""""""""""""""""""""""""""
+    command! -bang -nargs=* GGrep
+      \ call fzf#vim#grep(
+      \   'git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
+
+    nnoremap <C-P> :GFiles<CR>
 
     """"""""""""""""""""""""""""""
     " vim-vue
