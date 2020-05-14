@@ -17,7 +17,7 @@ Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'dietsche/vim-lastplace'
-Plug 'pi314/ime.vim', {'on': 'Liu', 'commit': '14e4c57ec4af6153ce0c3702989eb698913d84f9'} " ,, to turn on
+Plug 'pi314/ime.vim', {'on': 'Liu'} " ctrl-space to turn on
 Plug 'Tuxdude/mark.vim'
 Plug 'posva/vim-vue', {'for': 'vue'}
 Plug 'AndrewRadev/switch.vim'
@@ -99,6 +99,7 @@ endfunction
 " But that gets in the way of my old habit of togggling IME mode in windows
 " so let's use it as the toggle
 let g:ime_toggle_english='<C-@>'
+let g:ime_plugins = [ 'builtin_boshiamy' ]
 
 inoremap <C-R>/ <C-R>=Del_word_delims()<CR>
 cnoremap <C-R>/ <C-R>=Del_word_delims()<CR>
