@@ -94,13 +94,6 @@ function! Del_word_delims()
    return res
 endfunction
 
-" Terminal seems to translate <CTRL-Space> to <NUL> and trigger <CTRL-@> in
-" vim, which \"Insert previously inserted text and stop insert.\"
-" But that gets in the way of my old habit of togggling IME mode in windows
-" so let's use it as the toggle
-let g:ime_toggle_english='<C-@>'
-let g:ime_plugins = [ 'builtin_boshiamy' ]
-
 inoremap <C-R>/ <C-R>=Del_word_delims()<CR>
 cnoremap <C-R>/ <C-R>=Del_word_delims()<CR>
 
@@ -152,6 +145,17 @@ nnoremap <leader>q: q:
     "let g:UltiSnipsExpandTrigger="<tab>"
     "let g:UltiSnipsJumpForwardTrigger="<c-b>"
     "let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+    """"""""""""""""""""""""""""""
+    " ime.vue
+    """"""""""""""""""""""""""""""
+    " Terminal seems to translate <CTRL-Space> to <NUL> and trigger <CTRL-@> in
+    " vim, which \"Insert previously inserted text and stop insert.\"
+    " But that gets in the way of my old habit of togggling IME mode in windows
+    " so let's use it as the toggle
+    let g:ime_toggle_english='<C-@>'
+    let g:ime_plugins = [ 'builtin_boshiamy' ]
+
 
     """"""""""""""""""""""""""""""
     " switch
