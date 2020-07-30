@@ -24,6 +24,7 @@ Plug 'AndrewRadev/switch.vim'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-fugitive'
 
 Plug 'flazz/vim-colorschemes'
 
@@ -138,6 +139,11 @@ nnoremap <leader>q: q:
     " vim-vue
     """"""""""""""""""""""""""""""
     let g:vue_pre_processors = ['less']
+
+    if !exists('g:airline_symbols')
+        let g:airline_symbols = {}
+    endif
+    let g:airline_symbols.branch = ''
 
     """"""""""""""""""""""""""""""
     " ultisnip
