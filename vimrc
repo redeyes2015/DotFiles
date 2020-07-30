@@ -154,7 +154,6 @@ nnoremap <leader>q: q:
     " But that gets in the way of my old habit of togggling IME mode in windows
     " so let's use it as the toggle
     let g:ime_toggle_english='<C-@>'
-    let g:ime_plugins = [ 'builtin_boshiamy' ]
 
 
     """"""""""""""""""""""""""""""
