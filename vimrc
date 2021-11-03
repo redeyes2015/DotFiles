@@ -25,6 +25,8 @@ Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'jparise/vim-graphql'
+Plug 'google/vim-jsonnet', {'for': 'jsonnet'}
 
 Plug 'flazz/vim-colorschemes'
 
@@ -67,9 +69,10 @@ match ErrorMsg '\s\+$'
 " see: https://github.com/nodejs/node-v0.x-archive/issues/3172
 autocmd BufWritePre */project*   setlocal backupcopy=yes
 
+autocmd BufRead,BufNewFile *.jsonnet		set filetype=jsonnet
 autocmd FileType gitcommit setlocal spell
 autocmd FileType netrw nnoremap <buffer> / :keeppattern /
-autocmd FileType javascript,vue setlocal signcolumn=yes
+autocmd FileType typescriptreact,typescript,javascript,vue setlocal signcolumn=yes
 autocmd FileType vue syntax sync fromstart
 autocmd FileType vuejs set filetype=vue
 
@@ -116,6 +119,13 @@ nnoremap <leader>q: q:
     let g:ale_sign_error = '✗✗'
     let g:ale_javascript_eslint_suppress_eslintignore = 1
     let g:ale_maximum_file_size = 40960
+    let g:ale_fixers = {
+                \ 'typescriptreact': ['eslint'],
+                \ 'typescript': ['eslint']
+                \ }
+    let g:ale_fix_on_save = 1
+    let g:ale_completion_enabled = 1
+    let g:ale_completion_autoimport = 1
 
     """"""""""""""""""""""""""""""
     " ctrlp
@@ -178,4 +188,9 @@ nnoremap <leader>q: q:
       \     '\<\(\l\+\)\(-\l\+\)\+\>': "\\=substitute(submatch(0), '-\\(\\l\\)', '\\u\\1', 'g')",
       \   }
       \ ]
+
+    """"""""""""""""""""""""""""""
+    " jsonnet
+    """"""""""""""""""""""""""""""
+    let g:jsonnet_fmt_on_save = 0 " Disable auto format on save
 " }}}
