@@ -20,8 +20,13 @@ curl -sSLo ~/.config/fish/functions/fisher.fish --create-dirs \
 ln -s "$InstallDir/fishfile" ~/.config/fish/fishfile
 fish -c fisher
 
+fish -c "string match -q $InstallDir/bin \$fish_user_paths; or set -xUa fish_user_paths $InstallDir/bin"
+
 find "$InstallDir/fish-functions/" -type f -name '*.fish' -print0\
     | xargs -0 -I FILE ln -s FILE ~/.config/fish/functions/
+
+find "$InstallDir/fish-completions/" -type f -name '*.fish' -print0\
+    | xargs -0 -I FILE ln -s FILE ~/.config/fish/completions//
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 yes | ~/.fzf/install --no-zsh --no-bash
