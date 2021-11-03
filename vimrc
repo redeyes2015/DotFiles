@@ -146,7 +146,13 @@ nnoremap <leader>q: q:
       \ call fzf#vim#grep(
       \   'git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
 
-    nnoremap <C-P> :GFiles<CR>
+    command! -bang -nargs=* GFilesFromCWD
+      \ call fzf#run(fzf#wrap({
+      \   'source':  'git ls-files -- .',
+      \   'options': '-m --prompt "GitFilesCWD> "'
+      \}))
+
+    nnoremap <C-P> :GFilesFromCWD<CR>
 
     """"""""""""""""""""""""""""""
     " vim-vue
