@@ -1,5 +1,7 @@
 if test -f /usr/share/autojump/autojump.fish;
   source  /usr/share/autojump/autojump.fish;
+else if test -f /usr/local/share/autojump/autojump.fish;
+  source  /usr/local/share/autojump/autojump.fish;
 end
 
 if test "$TERM" = "xterm"
@@ -11,4 +13,3 @@ if test "$TERM" = "xterm"
     set -x TERM "gnome-256color"
   end
 end
-
