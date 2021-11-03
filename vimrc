@@ -83,6 +83,8 @@ let mapleader = ","
 nnoremap <Leader>- :Vexplore!<CR>
 nnoremap <Leader>t- :Texplore<CR>
 
+nnoremap <leader>gd :ALEGoToDefinition<CR>
+
 nnoremap `/ //e<CR>
 
 function! Del_word_delims()
