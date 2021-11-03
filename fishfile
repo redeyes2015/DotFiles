@@ -1,4 +1,3 @@
-edc/bass
-FabioAntunes/fish-nvm
 fishpkg/fish-last-job-id
 ~/DotFiles/fish-functions/fish_prompt.fish
+jorgebucaran/nvm.fish
