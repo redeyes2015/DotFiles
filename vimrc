@@ -17,7 +17,7 @@ Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'dietsche/vim-lastplace'
-Plug 'pi314/ime.vim', {'on': 'Liu'} " ctrl-space to turn on
+" Plug 'pi314/ime.vim', {'on': 'Liu'} " ctrl-space to turn on
 Plug 'Tuxdude/mark.vim'
 Plug 'posva/vim-vue', {'for': 'vue'}
 Plug 'AndrewRadev/switch.vim'
