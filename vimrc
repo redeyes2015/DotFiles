@@ -52,7 +52,8 @@ set splitbelow
 set switchbuf=usetab
 set gdefault
 
-set omnifunc=syntaxcomplete#Complete
+" set omnifunc=syntaxcomplete#Complete
+set omnifunc=ale#completion#OmniFunc
 
 colorscheme molokai
 " ctermbg=235 from molokai is just too subtle
@@ -83,7 +84,12 @@ let mapleader = ","
 nnoremap <Leader>- :Vexplore!<CR>
 nnoremap <Leader>t- :Texplore<CR>
 
-nnoremap <leader>gd :ALEGoToDefinition<CR>
+nmap <leader>gd <Plug>(ale_go_to_definition)
+nmap <leader>vgd <Plug>(ale_go_to_definition_in_vsplit)
+nmap <leader>ai <Plug>(ale_import)
+nmap <leader>ad <Plug>(ale_detail)
+nmap <leader>ah <Plug>(ale_hover)
+nnoremap <leader>af :ALEFindReferences -relative<Return>
 
 nnoremap `/ //e<CR>
 
@@ -122,6 +128,7 @@ nnoremap <leader>q: q:
     let g:ale_sign_error = '✗✗'
     let g:ale_javascript_eslint_suppress_eslintignore = 1
     let g:ale_maximum_file_size = 40960
+    let g:ale_lint_on_insert_leave = 1
     let g:ale_fixers = {
                 \ 'typescriptreact': ['eslint'],
                 \ 'typescript': ['eslint']
