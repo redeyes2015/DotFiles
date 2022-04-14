@@ -28,6 +28,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'jparise/vim-graphql'
 Plug 'google/vim-jsonnet', {'for': 'jsonnet'}
 Plug 'redeyes2015/gitmoji.vim', {'branch': 'main'}
+Plug 'tpope/vim-commentary'
 
 Plug 'flazz/vim-colorschemes'
 
