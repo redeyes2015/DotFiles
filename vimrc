@@ -187,7 +187,7 @@ nnoremap <leader>q: q:
     " vim, which \"Insert previously inserted text and stop insert.\"
     " But that gets in the way of my old habit of togggling IME mode in windows
     " so let's use it as the toggle
-    let g:ime_toggle_english='<C-@>'
+    " let g:ime_toggle_english='<C-@>'
 
 
     """"""""""""""""""""""""""""""
