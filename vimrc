@@ -167,6 +167,9 @@ nnoremap <leader>q: q:
 
     nnoremap <C-P> :GFilesFromCWD<CR>
 
+    """"""""""""""""""""""""""""""
+    " airline
+    """"""""""""""""""""""""""""""
     if !exists('g:airline_symbols')
         let g:airline_symbols = {}
     endif
