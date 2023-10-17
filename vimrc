@@ -8,10 +8,8 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-vinegar'
 Plug 'w0rp/ale'
 "Plug 'ctrlpvim/ctrlp.vim'
-Plug 'groenewege/vim-less', {'for': 'less'}
 Plug 'pangloss/vim-javascript'
 Plug 'vim-scripts/vcscommand.vim'
-Plug 'briancollins/vim-jst', {'for': 'jst'}
 Plug 'bling/vim-airline'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
@@ -161,11 +159,6 @@ nnoremap <leader>q: q:
       \}))
 
     nnoremap <C-P> :GFilesFromCWD<CR>
-
-    """"""""""""""""""""""""""""""
-    " vim-vue
-    """"""""""""""""""""""""""""""
-    let g:vue_pre_processors = ['less']
 
     if !exists('g:airline_symbols')
         let g:airline_symbols = {}
