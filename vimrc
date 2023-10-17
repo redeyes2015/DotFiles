@@ -89,6 +89,7 @@ nmap <leader>ai <Plug>(ale_import)
 nmap <leader>ad <Plug>(ale_detail)
 nmap <leader>ah <Plug>(ale_hover)
 nnoremap <leader>af :ALEFindReferences -relative<Return>
+nnoremap <leader>ar :ALERename<Return>
 
 nnoremap `/ //e<CR>
 
@@ -135,6 +136,12 @@ nnoremap <leader>q: q:
     let g:ale_fix_on_save = 1
     let g:ale_completion_enabled = 1
     let g:ale_completion_autoimport = 1
+
+    let g:ale_pattern_options = {
+                \   '\.java$': {
+                \       'ale_enabled': 0,
+                \   },
+                \}
 
     """"""""""""""""""""""""""""""
     " ctrlp
