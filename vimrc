@@ -26,6 +26,7 @@ Plug 'jparise/vim-graphql'
 Plug 'google/vim-jsonnet', {'for': 'jsonnet'}
 Plug 'redeyes2015/gitmoji.vim', {'branch': 'main'}
 Plug 'tpope/vim-commentary'
+Plug 'bullets-vim/bullets.vim', {'for': 'markdown'}
 
 Plug 'flazz/vim-colorschemes'
 
@@ -205,4 +206,10 @@ nnoremap <leader>q: q:
     " jsonnet
     """"""""""""""""""""""""""""""
     let g:jsonnet_fmt_on_save = 0 " Disable auto format on save
+
+    """"""""""""""""""""""""""""""
+    " bullets
+    """"""""""""""""""""""""""""""
+    let g:bullets_enable_in_empty_buffers = 0
+    let g:bullets_checkbox_markers = ' .-v'
 " }}}
