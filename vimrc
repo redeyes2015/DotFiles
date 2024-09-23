@@ -93,6 +93,13 @@ nnoremap <leader>ar :ALERename<Return>
 
 nnoremap `/ //e<CR>
 
+" src: https://github.com/Qyriad/dotfiles/blob/94ac7e0dc49ea12c02e5ebd73d5f593677a42101/nvim/core.vim#L349-L353
+" Like `*` (searches for the current word), but doesn't actually perform the search operation,
+" instead only setting the search pattern *register* (`/`), and re-setting 'hlsearch'.
+" In other words, higlight the current word and all occurences of it, and make the "next"
+" and "previous" search commands (`n` and `N`) also use the current word.
+nnoremap + <Cmd>let @/ = '\<' . expand("<cword>") . '\>' \| set hlsearch<CR>
+
 function! Del_word_delims()
    let reg = getreg('/')
    " After *                i^r/ will give me pattern instead of \<pattern\>
