@@ -7,7 +7,6 @@ Plug 'tpope/vim-sensible'
 " Press y. to yank an absolute path for the file under the cursor.
 Plug 'tpope/vim-vinegar'
 Plug 'w0rp/ale'
-"Plug 'ctrlpvim/ctrlp.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-scripts/vcscommand.vim'
 Plug 'bling/vim-airline'
@@ -142,15 +141,6 @@ nnoremap <leader>q: q:
                 \       'ale_enabled': 0,
                 \   },
                 \}
-
-    """"""""""""""""""""""""""""""
-    " ctrlp
-    """"""""""""""""""""""""""""""
-    let g:ctrlp_working_path_mode = 'rc'
-    let g:ctrlp_root_markers = ['Makefile', 'package.json']
-    let g:ctrlp_custom_ignore = {
-      \ 'dir': 'node_modules',
-      \ }
 
     """"""""""""""""""""""""""""""
     " FZF customization
