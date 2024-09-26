@@ -3,7 +3,7 @@
 	useConfigOnly = true
 
 [core]
-	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	autocrlf = false
 
 [alias]
@@ -14,10 +14,7 @@
 	co = checkout
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 	up = reset --keep '@{upstream}'
-	sh = !git-sh
 	clog = log --graph --date=short --pretty=format:\"%C(124)%ad %C(24)%h %C(34)%an %C(252)%s%C(178)%d\" #--encoding="ISO-8859-1"
-	d = difftool
-	exec = "!exec "
 	dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy  | less --tabs=4 -RFX --pattern '^(Date|added|deleted|modified): '; }; f"
 
 [color]
@@ -25,12 +22,6 @@
 	status = auto
 	branch = auto
 	grep = auto
-	sh = auto
-
-[color "sh"]
-	branch = yellow ul 
-	workdir = blue bold
-	dirty = red
 
 [merge]
 	tool = vimdiff
@@ -42,14 +33,13 @@
 [difftool]
 	prompt = false
 
-[svn]
-	rmdir = true
 [help]
-	autocorrect = 3
+	autocorrect = prompt
 [pull]
 	rebase = true
 [rebase]
 	autosquash = true
+	autostash = true
 [color "diff-highlight"]
 	oldNormal = red
 	oldHighlight = red 52
@@ -61,3 +51,7 @@
 	prune = true
 [mergetool]
 	keepBackup = false
+[commit]
+	verbose = true
+[status]
+	submoduleSummary = true
