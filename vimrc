@@ -19,13 +19,15 @@ Plug 'Tuxdude/mark.vim'
 Plug 'posva/vim-vue', {'for': 'vue'}
 Plug 'AndrewRadev/switch.vim'
 Plug 'tpope/vim-surround'
+" Plug 'machakann/vim-sandwich'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'jparise/vim-graphql'
+" Plug 'jparise/vim-graphql'
 Plug 'google/vim-jsonnet', {'for': 'jsonnet'}
 Plug 'redeyes2015/gitmoji.vim', {'branch': 'main'}
 Plug 'tpope/vim-commentary'
+Plug 'mbbill/undotree'
 Plug 'bullets-vim/bullets.vim', {'for': 'markdown'}
 
 Plug 'flazz/vim-colorschemes'
@@ -52,8 +54,9 @@ set switchbuf=usetab
 set gdefault
 
 " set omnifunc=syntaxcomplete#Complete
-set omnifunc=ale#completion#OmniFunc
+" set omnifunc=ale#completion#OmniFunc
 
+set termguicolors
 colorscheme molokai
 " ctermbg=235 from molokai is just too subtle
 hi Visual                      ctermbg=238
@@ -136,9 +139,11 @@ nnoremap <leader>q: q:
     let g:ale_javascript_eslint_suppress_eslintignore = 1
     let g:ale_maximum_file_size = 40960
     let g:ale_lint_on_insert_leave = 1
+
     let g:ale_fixers = {
                 \ 'typescriptreact': ['eslint'],
-                \ 'typescript': ['eslint']
+                \ 'typescript': ['eslint'],
+                \ 'go': ['gofmt']
                 \ }
     let g:ale_fix_on_save = 1
     let g:ale_completion_enabled = 1
