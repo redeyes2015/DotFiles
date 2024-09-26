@@ -16,7 +16,9 @@ if status is-interactive
     set -q MANPATH; or set MANPATH ''; set -gx MANPATH "/opt/homebrew/share/man" $MANPATH;
     set -q INFOPATH; or set INFOPATH ''; set -gx INFOPATH "/opt/homebrew/share/info" $INFOPATH;
 
-    if test -f /usr/share/autojump/autojump.fish;
+    if zoxide --help > /dev/null;
+      zoxide init --cmd j --hook pwd fish | source
+    else if test -f /usr/share/autojump/autojump.fish;
       source  /usr/share/autojump/autojump.fish;
     else if test -f $HOMEBREW_PREFIX/share/autojump/autojump.fish;
       source  $HOMEBREW_PREFIX/share/autojump/autojump.fish;
@@ -25,7 +27,8 @@ if status is-interactive
     abbr -a -- v vim
     abbr -a -- vi vim
     abbr -a -- k kubectl
-    abbr -a -- m make
+    abbr -a -- tf terraform
+    #abbr -a -- m make
     abbr -a -- g git
     abbr -a -- nr 'npm run'
     abbr -a -- tmux 'tmux -2'
