@@ -83,7 +83,7 @@ autocmd FileType vuejs set filetype=vue
 let mapleader = ","
 
 " Open the directory of current file in a vertical split / a new tab
-nnoremap <Leader>- :Vexplore!<CR>
+nnoremap <Leader>- :Vexplore<CR>
 nnoremap <Leader>t- :Texplore<CR>
 
 nmap <leader>gd <Plug>(ale_go_to_definition)
