@@ -65,6 +65,9 @@ hi Visual                      ctermbg=238
 " 'why my cursor suddonly jumpped, and where is it after all!?'
 hi MatchParen cterm=bold,italic ctermfg=208 ctermbg=233
 
+" Don't mark URL-like things as spelling errors
+syn match UrlNoSpell '\w\+:\/\/[^[:space:]]\+' contains=@NoSpell
+
 " Highlight ugly code
 match ErrorMsg '\%>120v.\+'
 match ErrorMsg '\s\+$'
